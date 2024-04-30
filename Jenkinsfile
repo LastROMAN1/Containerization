@@ -1,4 +1,3 @@
-
 pipeline {
   agent any
   stages {
@@ -9,11 +8,11 @@ pipeline {
         script {
           dir ('tooling/'){
             sh 'pwd'
-          docker.withRegistry('', 'a9959bb4-49b6-4f96-b62d-0f6a8c801076') {
+          docker.withRegistry('', 'DockerHub-Credential') {
             sh 'pwd'
             // def toolingImage = docker.build("warriconnected/containerization:${env.BRANCH_NAME}-v1.0.0")
             def toolingImage = docker.build("warriconnected/containerization:tooling-v1.0.0")
-            toolingImage.push("${env.BRANCH_NAME}-v1.0.0")
+            toolingImage.push("${env.BRANCH_NAME}-tooling-v1.0.0")
           }
 
           }
@@ -32,10 +31,3 @@ pipeline {
     }
   }
 }
-
-
-
-
-
-
-

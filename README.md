@@ -6,7 +6,8 @@ Later on we will add a CI tool i.e jenkins to achieve a multi-branch pipeline
 
   We will be deploying the tooling app packed with it's MySql backend using containers.
 
-# We will be containerizing the tooling application i.e both the frontend and backend, and of course we will be automating the containerization. First we will do it manually, kinda like a test run, then we will add continous integration and automation.
+### We will be containerizing the tooling application i.e both the frontend and backend, and of course we will be automating the containerization. 
+### First we will do it manually and subsequently  we will add continous integration and automation.
 
 
 ### Deploy MySql in a container.

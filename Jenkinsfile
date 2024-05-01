@@ -6,13 +6,13 @@ pipeline {
       steps{
 
         script {
-          dir ('tooling/'){
+          dir ('php-todo/'){
             sh 'pwd'
           docker.withRegistry('', 'DockerHub-Credential') {
             sh 'pwd'
             // def toolingImage = docker.build("warriconnected/containerization:${env.BRANCH_NAME}-v1.0.0")
-            def toolingImage = docker.build("warriconnected/containerization:tooling-v1.0.0")
-            toolingImage.push("${env.BRANCH_NAME}-tooling-v1.0.0")
+            def toolingImage = docker.build("warriconnected/containerization:todo-v1.0.0")
+            toolingImage.push("${env.BRANCH_NAME}-v1.0.0")
           }
 
           }
